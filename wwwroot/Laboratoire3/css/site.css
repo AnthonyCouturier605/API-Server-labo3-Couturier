@@ -1,0 +1,136 @@
+body {
+    background-image: linear-gradient(45deg, rgb(212, 0, 255), rgb(0, 0, 255));
+}
+
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+    min-width: 490px;
+    margin: auto;
+    background-color: rgb(255, 255, 255);
+    height: 100vh;
+    border: 1px solid lightgray;
+}
+
+.headerPanel {
+    flex:0.5;
+    background-image: linear-gradient(180deg, lightgray, gray);
+    padding:5px;
+}
+
+.scrollContainer {
+    overflow-y: scroll;
+    flex:12;
+    border-top: 1px solid lightgray;
+}
+
+.header {
+    width: 100%;
+    font-size: 26px;
+    color:rgb(55, 55, 55);
+    font-weight: bold;
+    text-align: center;
+}
+
+
+#nouvellesList {
+    width: 100%;
+    padding: 10px;
+}
+
+.favicon {
+    height: 24px;
+    margin: 8px;
+}
+
+.headerLayout {
+    display: grid;
+    grid-template-columns: 50px auto 35px 35px 19px;
+    align-items: center;
+
+}
+.searchBarLayout {
+    display: grid;
+    grid-template-columns: 0.5fr 40px 1fr 35px 35px 16px;
+    align-items: center;
+
+}
+.nouvelleLayout {
+    border-radius: 8px;
+    padding-left: 5px;
+
+}
+
+.nouvelleRow .cmd {
+    display: none;
+}
+
+.nouvelleRow:hover .cmd {
+    display: inline-block;
+    margin: 0 1px;
+}
+
+.nouvelleRow:hover {
+    background-color: rgb(248, 248, 248)
+}
+
+.cmd {
+    cursor: pointer;
+    font-size: 30px !important;
+    font-weight: bold;
+    color: blue;
+    text-align: center;
+}
+
+.cmd:hover {
+    color: rgb(2, 166, 221);
+}
+
+.cmd:active {
+    color: lightblue;
+}
+
+label {
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+div2, span2 {
+    border:1px solid red;
+}
+
+.imageNouvelle{
+    max-width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    max-height: 1000px;
+}
+.catText{
+    color: rgb(82, 82, 82);
+}
+.nouvelleTitle{
+    margin-right: 1rem;
+}
+.dateNouvelle{
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: smaller;
+}
+.newsText{
+    text-align: justify;
+    padding: 1rem;
+}
+.newsCommands{
+
+}
+.newsTop{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
