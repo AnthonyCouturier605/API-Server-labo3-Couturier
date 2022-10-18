@@ -77,7 +77,9 @@ module.exports =
         }
         valueMatch(value, searchValue) {
             try {
-                return new RegExp('^' + searchValue.toLowerCase().replace(/\*/g, '.*') + '$').test(value.toString().toLowerCase());
+                let sv = '^' + searchValue.toLowerCase().replace(/\*/g, '.*') + '$';
+                let v = value.toString().replace(/(\r\n|\n|\r)/gm, "").toLowerCase();
+                return new RegExp(sv).test(v);
             } catch (error) {
                 console.log(error);
                 return false;
